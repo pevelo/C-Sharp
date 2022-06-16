@@ -1,0 +1,11 @@
+// Четный массив
+// Напишите метод, который создает массив длинной count элементов, содержащий последовательные четные числа в порядке возрастания.
+public static int[] GetFirstEvenNumbers(int count)
+{
+    int[] numbers = new int[count];
+    for (int i = 1; i <= count; i++)
+    {
+        numbers[i-1] = i * 2;
+    }
+    return numbers;
+}

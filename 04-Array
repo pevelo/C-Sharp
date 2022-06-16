@@ -9,3 +9,38 @@ public static int[] GetFirstEvenNumbers(int count)
     }
     return numbers;
 }
+
+// Написать метод поиска индекса максимального элемента. То есть такого числа i, что array[i] — это максимальное из чисел в массиве.
+public static int MaxIndex(double[] array)
+{
+    var max = double.MinValue;
+    var index = -1;
+    for (var i = 0; i < array.Length; i++)
+        if (max < array[i])
+        {
+            max = array[i];
+            index = i;
+        }
+    return index;
+}
+
+// Найти количество вхождений заданного числа в массив чисел.
+public static int GetElementCount(int[] items, int itemToCount)
+{
+    int count = 0;
+    for (int i = 0; i < items.Length; i++)
+         if (items[i] == itemToCount)
+             count++;
+    return count;
+}
+
+// Поиск массива в массиве
+static bool ContainsAtIndex(int[] array, int[] subArray, int i)
+{
+    for (int x = 0; x < subArray.Length; x++)
+    {
+         if (array[x + i] != subArray[x])
+             return false;
+    }
+    return true;
+}
